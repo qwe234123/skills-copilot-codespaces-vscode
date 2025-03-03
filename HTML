@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoExchange</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container">
+            <h1 class="logo fade-in">CryptoExchange</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#exchange" class="nav-link">Обмен</a></li>
+                    <li><a href="#reviews" class="nav-link" id="reviews-link">Отзывы</a></li>
+                    <li><a href="#contacts" class="nav-link" id="contacts-link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <section id="exchange" class="container slide-up">
+        <h2 class="section-title">Обмен криптовалют</h2>
+        <form id="exchange-form">
+            <label for="currency-from">Отдаю:</label>
+            <select id="currency-from">
+                <option>Bitcoin (BTC)</option>
+                <option>Ethereum (ETH)</option>
+                <option>Tether (USDT)</option>
+                <option>BNB (Binance Coin)</option>
+                <option>XRP (Ripple)</option>
+            </select>
+            
+            <label for="amount">Сумма:</label>
+            <input type="number" id="amount" placeholder="Введите сумму" required>
+            
+            <label for="currency-to">Получаю:</label>
+            <select id="currency-to">
+                <option>Ethereum (ETH)</option>
+                <option>Bitcoin (BTC)</option>
+                <option>Tether (USDT)</option>
+                <option>BNB (Binance Coin)</option>
+                <option>XRP (Ripple)</option>
+            </select>
+            
+            <button type="button" id="exchange-btn" class="btn-animate">Обменять</button>
+        </form>
+    </section>
+
+    <!-- Модальное окно для обмена -->
+    <div id="exchange-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-exchange-modal">&times;</span>
+            <h2>Введите ваш адрес кошелька</h2>
+            <input type="text" id="wallet-address" placeholder="Ваш адрес кошелька" required>
+            <p>Адрес резерва: 123123123</p>
+            <button id="confirm-exchange-btn" class="btn-animate">Подтвердить</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для успешного перевода -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-success-modal">&times;</span>
+            <h2>Перевод успешен!</h2>
+            <p>Ваш обмен завершен. Спасибо за использование CryptoExchange!</p>
+        </div>
+    </div>
+
+    <!-- Модальное окно для отзывов -->
+    <div id="reviews-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-reviews-modal">&times;</span>
+            <h2>Отзывы клиентов</h2>
+            <div class="testimonial">
+                <p>"Отличный сервис, обмен занял всего 5 минут!"</p>
+                <span>- Алексей</span>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <div class="testimonial">
+                <p>"Прозрачные курсы, всё честно. Спасибо!"</p>
+                <span>- Марина</span>
+                <div class="stars">⭐⭐⭐⭐</div>
+            </div>
+            <button class="close-modal-btn" id="close-reviews-btn">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для контактов -->
+    <div id="contacts-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-contacts-modal">&times;</span>
+            <h2>Контакты</h2>
+            <p>Email: <a href="mailto:support@cryptoexchange.com">support@cryptoexchange.com</a></p>
+            <p>Телеграм: <a href="https://t.me/13243214">@13243214</a></p>
+            <p>Телефон: +1 234 567 89</p>
+            <button class="close-modal-btn" id="close-contacts-btn">Закрыть</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
